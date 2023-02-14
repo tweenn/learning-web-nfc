@@ -1,0 +1,22 @@
+{
+	"name": "learning-web-nfc",
+	"version": "1.0.0",
+	"description": "Just a learning lesson",
+	"main": "app/index.js",
+	"repository": "git@github.com:tweenn/learning-web-nfc.git",
+	"author": "Felipe Zuntini <felipezuntini@hotmail.com>",
+	"license": "MIT",
+	"private": false,
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"push": "push-dir --dir=dist --branch=master --force --verbose",
+		"deploy": "sh __devops__/build.sh",
+		"deploy:surge": "surge ./dist"
+	},
+	"devDependencies": {
+		"push-dir": "^0.4.1",
+		"vite": "^4.1.1"
+	}
+}
