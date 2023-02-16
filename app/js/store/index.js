@@ -5,4 +5,4 @@ const initialStore = {
 	nfcData: []
 };
 
-export const { useStore } = createStore(initialStore);
+export const { useStore, getStore } = createStore(initialStore);

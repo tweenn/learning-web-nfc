@@ -3,11 +3,18 @@ import { html } from '../helpers/preact';
 
 import CarbonButton from './carbon/button';
 
+import { getStore } from '../store';
 
 export default () => {
 	const log = (message) => {
-		const target = document.getElementById('reader-log');
-		target.innerHTML = target.innerHTML + `<br />${message}`;
+		const [nfcLog, setNfcLog] = getStore.nfcData();
+
+		console.log(nfcLog);
+
+		setNfcLog([
+			...nfcLog,
+			message
+		]);
 	};
 
 	const handleOnClick = async () => {

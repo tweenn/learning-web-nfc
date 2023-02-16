@@ -4,6 +4,7 @@ import { html } from './helpers/preact';
 import UiShell from './components/carbon/ui-shell';
 
 import readButton from './components/read-button';
+import readLog from './components/read-log';
 
 export default () => {
 
@@ -35,7 +36,7 @@ export default () => {
 					</div>
 					<div class="bx--row pt-2">
 						<div class="bx--col ${colClasses}">
-							<p id='reader-log' />
+							<${readLog} />
 						</div>
 					</div>
 				</div>
